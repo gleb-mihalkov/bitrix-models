@@ -11,19 +11,19 @@ namespace BitrixModel
     class Highload extends EloquentModel
     {
         /**
-         * Sets primary key column as 'ID'.
+         * Указывает, что первичным ключом является столбец 'ID'.
          * @var string
          */
         protected $primaryKey = 'ID';
 
         /**
-         * This properties cannot by assigned directly.
+         * Запрещат задавать свойство 'ID' при массовом присвоение значений.
          * @var array
          */
         protected $guarded = ['ID'];
 
         /**
-         * Disables Eloquent model's timestamps.
+         * Запрещает использовать Eloquest timestamps.
          * @var boolean
          */
         public $timestamps = false;
