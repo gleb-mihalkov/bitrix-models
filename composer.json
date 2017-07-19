@@ -1,0 +1,20 @@
+{
+    "name": "gm/bitrix-models",
+    "description": "Library which provides objective model in Bitrix CMS.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "gleb-mihalkov",
+            "email": "gleb.mihalkov.work@yandex.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "BitrixModel\\": "src/"
+        }
+    },
+    "require": {
+        "arrilot/bitrix-models": "^0.5.1",
+        "illuminate/database": "^5.4"
+    }
+}
