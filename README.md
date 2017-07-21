@@ -10,4 +10,4 @@
 
 * [Eloquent Eloquent](http://laravel.su/docs/5.0/eloquent);
 
-* [Документация по этой библиотеке](https://gleb-mihalkov.github.io/bitrix-models-api).
+* [Документация по этой библиотеке](https://gleb-mihalkov.github.io/bitrix-models).
