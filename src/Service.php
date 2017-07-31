@@ -24,6 +24,7 @@ namespace BitrixModel
 
         /**
          * Инициализирует модели Eloquent.
+         * @internal
          * @return void
          */
         protected static function initEloquent()
