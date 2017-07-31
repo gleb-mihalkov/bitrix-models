@@ -2,6 +2,7 @@
 namespace BitrixModel
 {
     use Arrilot\BitrixModels\Models\EloquentModel;
+    use Illuminate\Contracts\Support\Arrayable;
 
     /**
      * Базовый класс модели элемента Highload-блока.
@@ -10,12 +11,6 @@ namespace BitrixModel
      */
     class Highload extends EloquentModel
     {
-        /**
-         * Указывает, что первичным ключом является столбец 'ID'.
-         * @var string
-         */
-        protected $primaryKey = 'ID';
-
         /**
          * Запрещат задавать свойство 'ID' при массовом присвоение значений.
          * @var array
@@ -27,5 +22,33 @@ namespace BitrixModel
          * @var boolean
          */
         public $timestamps = false;
+
+        /**
+         * Получает модель или массив моделей по первичному ключу.
+         * @param  numeric|numeric[] $id      ID модели или массив ID моделей.
+         * @param  array             $columns Свойства модели, которые должны быть заполнены.
+         * @return static|static[]          Модель или массив моделей.
+         */
+        public static function id($id, $columns = ['*'])
+        {
+            $isList = is_array($id) || $id instanceof Arrayable;
+            $value = $id;
+
+            if ($isList)
+            {
+                $value = [];
+
+                foreach ($id as $item)
+                {
+                    $list[] = $item * 1;
+                }
+            }
+            else
+            {
+                $value = $id * 1;
+            }
+
+            return parent::find($value, $columns);
+        }
     }
 }
