@@ -15,6 +15,7 @@
     },
     "require": {
         "arrilot/bitrix-models": "^0.5.1",
-        "illuminate/database": "^5.4"
+        "illuminate/database": "^5.4",
+        "illuminate/events": "^5.4"
     }
 }
