@@ -40,7 +40,7 @@ namespace BitrixModel
 
                 foreach ($id as $item)
                 {
-                    $list[] = $item * 1;
+                    $value[] = $item * 1;
                 }
             }
             else
